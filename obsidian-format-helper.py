@@ -4,7 +4,6 @@ import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--input', help='Input text', required=True)
-parser.add_argument('-n', '--newline', help='Append new line', action="store_true")
 args = parser.parse_args()
 
 # test = "text #link *italics **bold text #eof-before-space"
@@ -38,8 +37,6 @@ while i < len(text):
     else:
         new_text += text[i]
         i += 1
-if args.newline is True:
-    new_text += "\n"
 
 sys.stdout.write(new_text)
 sys.exit(0)
