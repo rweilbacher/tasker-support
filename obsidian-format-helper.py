@@ -19,6 +19,7 @@ while i < len(text):
         i += 1
         if text[i] == " " or text[i] == "\n":
             # A hashtag followed by a space indicates a heading not a link
+            new_text += "#"
             continue
 
         new_text += "[["
