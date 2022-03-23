@@ -10,6 +10,7 @@ args = parser.parse_args()
 # text = test
 text = args.input
 
+
 new_text = ""
 i = 0
 while i < len(text):
@@ -17,7 +18,7 @@ while i < len(text):
     if text[i] == '#':
         new_text += "[["
         i += 1
-        while i < len(text) and (text[i] != " " or text[i] == "\n"):
+        while i < len(text) and text[i] != " " and text[i] != "\n":
             new_text += text[i]
             i += 1
         new_text += "]]"
@@ -30,7 +31,7 @@ while i < len(text):
             new_text += '*'
             suffix += '*'
             i += 1
-        while i < len(text) and text[i] != " " or text[i] == "\n":
+        while i < len(text) and text[i] != " " and text[i] != "\n":
             new_text += text[i]
             i += 1
         new_text += suffix
