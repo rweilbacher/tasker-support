@@ -1,3 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/python
 from tempfile import NamedTemporaryFile
 import shutil
 import csv
